@@ -1,0 +1,22 @@
+{
+    "name": "jtx/foreup",
+    "description": "Foreup Code Challenge",
+    "type": "library",
+    "autoload": {
+        "psr-4": {"jtx\\foreup\\": "src/"}
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+        "psr/log": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Taylor",
+            "email": "jtx@jtxmail.com"
+        }
+    ]
+}
