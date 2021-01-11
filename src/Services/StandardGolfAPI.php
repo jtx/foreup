@@ -4,7 +4,7 @@ namespace jtx\foreup\Services;
 
 use jtx\foreup\Interfaces\GolfAPIInterface;
 
-class StandardGolfAPI extends AbstractFoldApi implements GolfAPIInterface
+class StandardGolfAPI extends AbstractGolfApi implements GolfAPIInterface
 {
     // Normally all this would be in an .env or something. Out of this scope however.
     const USERNAME = 'devtesting';

@@ -5,7 +5,7 @@ namespace jtx\foreup\Services;
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
 
-abstract class AbstractFoldApi
+abstract class AbstractGolfApi
 {
     /**
      * @var Client
