@@ -1,17 +1,6 @@
 # foreup
 - Test repo for some golf fun
 
+in your "require" section in composer.json, go ahead and add        
 
-
-    use jtx\foreup\Services\StandardGolfApi;
-    $x = new StandardGolfApi();
-    $y = $x->auth();
-    $x->createUser($y, 1, ['username' => 'jimmy']);
-
-
-or if you're lazy
-
-
-    use jtx\foreup\Services\StandardGolfApi;
-    $x = new StandardGolfApi();
-    $x->createUserOneStep(1, ['username' => 'jimmy']);
+        "jtx/foreup": "@dev"
