@@ -4,7 +4,7 @@ namespace jtx\foreup\Services;
 
 use jtx\foreup\Interfaces\GolfAPIInterface;
 
-class StandardGolfAPI extends AbstractGolfApi implements GolfAPIInterface
+class StandardGolfAPI extends AbstractFoldApi implements GolfAPIInterface
 {
     // Normally all this would be in an .env or something. Out of this scope however.
     const USERNAME = 'devtesting';
@@ -17,7 +17,7 @@ class StandardGolfAPI extends AbstractGolfApi implements GolfAPIInterface
      * Get JWT string
      *
      * @return string
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Exception
      */
     public function auth(): string
     {
@@ -35,7 +35,7 @@ class StandardGolfAPI extends AbstractGolfApi implements GolfAPIInterface
         ]);
 
         if (!$this->responseOK($res)) {
-            return false;
+            throw new \Exception('Invalid Credentials.');
         }
 
         $contents = $res->getBody()->getContents();
@@ -81,7 +81,7 @@ class StandardGolfAPI extends AbstractGolfApi implements GolfAPIInterface
      * @param int $courseId
      * @param array $customer
      * @return bool
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \Exception
      */
     public function createUserOneStep(int $courseId, array $customer): bool
     {
